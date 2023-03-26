@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Schools</title>
+</head>
+<body>
+	<h1>List of Schools</h1>
+	<table class="table table-stripped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Contact Number</th>
+				<th>Address</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let school of schools">
+				<td>{{ school.id }}</td>
+				<td>{{ school.name }}</td>
+				<td>{{ school.contactNo }}</td>
+				<td>{{ school.address }}</td>
+				<td>
+					<button (click)="updateSchool(school.id)" class="btn btn-info">Edit</button>
+				</td>
+				<td>
+					<button (click)="deleteSchool(school.id)" class="btn btn-danger" style="margin-left: 10px">Remove</button>
+				</td>
+				<td>
+					<button (click)="viewSchool(school.id)" class="btn btn-danger" style="margin-left: 10px">Info</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

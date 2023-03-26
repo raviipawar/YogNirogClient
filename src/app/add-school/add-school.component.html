@@ -1,0 +1,18 @@
+
+<h2>Register School</h2>
+<form (ngSubmit)="onSubmit()" #schoolForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="school.name" required>
+  </div>
+  <div>
+    <label for="contactNumber">Contact Number:</label>
+    <input type="text" id="contactNumber" name="contactNumber" [(ngModel)]="school.contactNo" required>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" [(ngModel)]="school.address" required>
+  </div>
+  <button type="submit" [disabled]="!schoolForm.valid">Submit</button>
+</form>
+
